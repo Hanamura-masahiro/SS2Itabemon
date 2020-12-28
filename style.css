@@ -103,7 +103,7 @@ h1 {
     color: #fff;
 }
 
-.research {
+.search {
     background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(30, 130, 76, 1) 50%);
     background-size: 200% auto;
     transition: .3s;
@@ -111,7 +111,7 @@ h1 {
     text-decoration: underline;
 }
 
-.research :hover {
+.search :hover {
     background-position: -100% 0;
     color: #fff;
 }
