@@ -24,7 +24,7 @@ html {
 }
         
 h2 {
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
 }
         
@@ -104,16 +104,17 @@ h1 {
 }
 
 .search {
-    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(30, 130, 76, 1) 50%);
+    background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(30,130,76,1) 50%);
     background-size: 200% auto;
     transition: .3s;
     color: green;
     text-decoration: underline;
 }
 
-.search :hover {
+.search:hover {
     background-position: -100% 0;
     color: #fff;
 }
+
         
 
