@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="qStyle.css">
+        <div class="bg"></div>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ <script type="text/javascript" src="./app.js"></script>
+<div class="choose_box">
+   
+<!-- 最初の質問 -->
+    
+   
+<div id="q_1" class="fit">
+<p>質問1</p>
+<h1>和食、洋食、中華ならどれが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="wasyoku"><a class="btn" href="#q_2_wa">和食</a></li>
+<li class="yousyoku"><a class="btn" href="#q_2_yo">洋食</a></li>
+<li class="chuka"><a class="btn" href="#q_2_chu">中華</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    
+</div>
+
+
+<!-- 2問目の質問 -->
+
+    
+<div id="q_2_wa" style="display: none;">
+<p>質問2</p>
+    <h1>ご飯、麺、粉ものならどれが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="rice"><a class="btn" href="#q_3_wa_go">ご飯</a></li>
+<li class="nudle"><a class="btn" href="#q_3_wa_men">麺</a></li>
+<li class="ko"><a class="btn" href="#q_3_wa_ko">粉もの</a></li>
+    </ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+</div>
+    <!------------------------------------------------------------------->
+<div id="q_2_yo" style="display: none;">
+<p>質問2</p>
+    <h1>ご飯、麺、パンならどれが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="rice"><a class="btn" href="#q_3_yo_go">ご飯</a></li>
+<li class="nudle"><a class="btn" href="#q_3_yo_men">麺</a></li>
+<li class="pan"><a class="btn" href="#q_3_yo_pan">パン</a></li>
+    </ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+</div>
+    <!------------------------------------------------------------------->
+<div id="q_2_chu" style="display: none;">
+<p>質問2</p>
+    <h1>ご飯、麺、パンならどれが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="rice"><a class="btn" href="#q_3_chu_go">ご飯</a></li>
+<li class="nudle"><a class="btn" href="#q_3_chu_men">麺</a></li>
+<li class="pan"><a class="btn" href="#q_3_chu_pan">パン</a></li>
+    </ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+</div>
+    
+<!-- 3問目の質問 -->
+
+    
+<div id="q_3_wa_go" style="display: none;">
+<p>質問3</p>
+<h1>肉、魚介類、揚げ物のどれが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="niku"><a class="btn" href="#q_4_wa_go_ni">肉</a></li>
+<li class="sakana"><a class="btn" href="#q_4_wa_go_sa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#q_4_wa_go_age">揚げ物</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_2_wa">ひとつ前に戻る</a></span>
+</div>
+    <!------------------------------------------------------------------->
+<div id="q_3_wa_men" style="display: none;">
+<p>質問3</p>
+<h1>肉、魚介類、揚げ物のどれが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="niku"><a class="btn" href="#q_4_wa_men_ni">肉</a></li>
+<li class="sakana"><a class="btn" href="#q_4_wa_men_sa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#q_4_wa_men_age">揚げ物</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_2_wa">ひとつ前に戻る</a></span>
+</div>
+    <!------------------------------------------------------------------->
+<div id="q_3_wa_ko" style="display: none;">
+<p>質問3</p>
+<h1>肉、魚介類どっちが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="niku"><a class="btn" href="#q_4_wa_ko_ni">肉</a></li>
+<li class="sakana"><a class="btn" href="#q_4_wa_ko_sa">魚介類</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_2_wa">ひとつ前に戻る</a></span>
+</div>
+    <!------------------------------------------------------------------->
+<div id="q_3_yo_go" style="display: none;">
+<p>質問3</p>
+<h1>肉、揚げ物のどちらが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="niku"><a class="btn" href="#q_4_yo_go_ni">肉</a></li>
+<li class="sakana"><a class="btn" href="#q_4_yo_go_sa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#q_4_yo_go_age">揚げ物</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_2_yo">ひとつ前に戻る</a></span>
+</div>
+    <!------------------------------------------------------------------->
+
+<div id="q_3_yo_men" style="display: none;">
+<p>質問3</p>
+<h1>肉、魚介類のどちらが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="niku"><a class="btn" href="#q_4_yo_men_ni">肉</a></li>
+    <li class="sakana"><a class="btn" href="#q_4_yo_go_sa">魚介類</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_2_yo">ひとつ前に戻る</a></span>
+</div>
+    <!------------------------------------------------------------------->
+<div id="q_3_yo_pan" style="display: none;">
+<p>質問3</p>
+<h1>肉、揚げ物のどちらが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="niku"><a class="btn" href="#q_4_yo_pan_ni">肉</a></li>
+<li class="agemono"><a class="btn" href="#q_4_yo_pan_age">揚げ物</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_2_yo">ひとつ前に戻る</a></span>
+</div>
+    <!------------------------------------------------------------------->
+<div id="q_3_chu_go" style="display: none;">
+<p>質問3</p>
+<h1>肉、魚介類、揚げ物のどれが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="niku"><a class="btn" href="#q_4_chu_go_ni">肉</a></li>
+<li class="sakana"><a class="btn" href="#q_4_chu_go_sa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#q_4_chu_go_age">揚げ物</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_2_chu">ひとつ前に戻る</a></span>
+</div>
+    <!------------------------------------------------------------------->
+<div id="q_3_chu_men" style="display: none;">
+<p>質問3</p>
+<h1>肉、魚介類、揚げ物のどれが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="niku"><a class="btn" href="#q_4_chu_men_ni">肉</a></li>
+<li class="sakana"><a class="btn" href="#q_4_chu_men_sa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#a_chu_men_age">揚げ物</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_2_chu">ひとつ前に戻る</a></span>
+</div>
+    <!------------------------------------------------------------------->
+<div id="q_3_chu_pan" style="display: none;">
+<p>質問3</p>
+<h1>肉、魚介類、揚げ物のどれが食べたい？</h1>
+<ul class="flexbox fw">
+<li class="niku"><a class="btn" href="#a_chu_pan_ni">肉</a></li>
+<li class="sakana"><a class="btn" href="#a_chu_pan_sa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#a_chu_pan_age">揚げ物</a></li>
+</ul>
+    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_2_chu">ひとつ前に戻る</a></span>
+</div>
+    
+
+
+<!-- 4問目の質問 -->
+<!--　和食　-->
+
+    
+<div id="q_4_wa_go_sa" style="display: none;">
+<p>質問4</p>
+<h1>温かいものと冷たいものならどっち？</h1>
+<ul class="flexbox fw">
+<li class="hot"><a class="btn" href="#a_wa_go_sa_hot">温かいもの</a></li>
+<li class="cold"><a class="btn" href="#a_wa_go_sa_co">冷たいもの</a></li>
+</ul>
+     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+     <span><a class="btn" href="#q_3_wa_go">ひとつ前に戻る</a></span>
+</div>
+    
+
+<div id="q_4_wa_men_ni" style="display: none;">
+<p>質問4</p>
+<h1>温かいものと冷たいものならどっち？</h1>
+<ul class="flexbox fw">
+<li class="hot"><a class="btn" href="#a_wa_men_ni_hot">温かいもの</a></li>
+<li class="cold"><a class="btn" href="#a_wa_men_ni_co">冷たいもの</a></li>
+</ul>
+     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+</div>
+    
+<div id="q_4_wa_men_gyo" style="display: none;">
+<p>質問4</p>
+<h1>温かいものと冷たいものならどっち？</h1>
+<ul class="flexbox fw">
+<li class="hot"><a class="btn" href="#a_wa_men_gyo_hot">温かいもの</a></li>
+<li class="cold"><a class="btn" href="#a_wa_men_gyo_co">冷たいもの</a></li>
+</ul>
+     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+     <span><a class="btn" href="#q_3_wa_men">ひとつ前に戻る</a></span>
+</div>
+    
+
+    
+<!--　中華　-->
+<div id="q_4_chu_men_ni" style="display: none;">
+<p>質問4</p>
+<h1>温かいものと冷たいものならどっち？</h1>
+<ul class="flexbox fw">
+<li class="hot"><a class="btn" href="#a_chu_men_ni_hot">温かいもの</a></li>
+<li class="cold"><a class="btn" href="#a_chu_men_ni_co">冷たいもの</a></li>
+</ul>
+     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+     <span><a class="btn" href="#q_3_chu_men">ひとつ前に戻る</a></span>
+</div>
+
+<!-- 質問の答え -->
+   
+ <div id="a_wa_go_ni_hot" style="display: none;">
+        <p>あなたにおすすめなのは…</p>
+        <h4>『ハンバーグ』です！！</h4>
+   <span><a class="btn" href="#q_1">やりなおす</a></span>
+</div>
+  
+
+   
+  <div id="answer2" style="display: none;">
+        <p>あなたにおすすめなのは…</p>
+        <h4>『ラーメン』です！！</h4>
+     <span><a class="btn" href="#q_1">もどる</a></span>
+</div>
+  
+
+</div>
+
+</body>
+</html>
