@@ -185,7 +185,7 @@ h4 {
     margin: auto;
     padding: 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 50px;
     font-weight: 600;
     color: #fff;
     text-align: center;
@@ -198,9 +198,9 @@ h4 {
   top: 20px;
   width: 100%;
 }
-#q_06 span,#q_07 span {
-  display: block;
-  width:100%;
+span {
+  display:flex ;
+  width:200%;
 }
 #q_06 a,#q_07 a {
   display: block;
@@ -208,5 +208,49 @@ h4 {
   text-align: center;
 }
 
-        
+strong {
+    text-align: center;
+      background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, rgba(30,130,76,1) 50%);
+    background-size: 200% auto;
+    transition: .3s;
+    color: green;
+    text-decoration: underline;
+}
+strong:hover {
+    background-position: -100% 0;
+    color: #fff;
+}
 
+.answer a{
+    margin-top: 50%;
+    margin-left: 300px;
+    text-align: center;
+    font-size: 40px;
+    background-position: 0 0;
+    margin-right: 50px;
+}
+
+.quest a{
+    text-align: center;
+    font-size: 30px;
+    background-position: 0 0;
+     margin-right: 50px;
+}
+.quest a:hover {
+    background-position: -100% 0;
+    color: #fff;
+}
+
+.foods {
+    width:100%;
+    height: 300px;
+    margin-top: 10px;
+    margin-left:auto;
+    margin-bottom: 10px;
+    padding:5px;
+    text-align: center;
+}      
+
+.movebtn a {
+    text-align: center;
+}
