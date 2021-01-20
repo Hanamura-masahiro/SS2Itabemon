@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
   <meta charset="utf-8">
   <link rel="stylesheet" href="qStyle.css">
         <div class="bg"></div>
@@ -8,6 +11,8 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
  <script type="text/javascript" src="./app.js"></script>
+    <!--答えを表示する処理-->
+
 <div class="choose_box">
    
 <!-- 最初の質問 -->
@@ -21,7 +26,7 @@
 <li class="yousyoku"><a class="btn" href="#q_2_yo">洋食</a></li>
 <li class="chuka"><a class="btn" href="#q_2_chu">中華</a></li>
 </ul>
-    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="../home.html">診断をやめる</a></span>
     
 </div>
 
@@ -57,7 +62,7 @@
 <ul class="flexbox fw">
 <li class="rice"><a class="btn" href="#q_3_chu_go">ご飯</a></li>
 <li class="nudle"><a class="btn" href="#q_3_chu_men">麺</a></li>
-<li class="pan"><a class="btn" href="#q_3_chu_pan">パン</a></li>
+<li class="pan"><a class="btn" href="#answerpage" id="chupa">パン</a></li>
     </ul>
     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
 </div>
@@ -69,9 +74,9 @@
 <p>質問3</p>
 <h1>肉、魚介類、揚げ物のどれが食べたい？</h1>
 <ul class="flexbox fw">
-<li class="niku"><a class="btn" href="#q_4_wa_go_ni">肉</a></li>
+<li class="niku"><a class="btn" href="#answerpage" id="wagoni">肉</a></li>
 <li class="sakana"><a class="btn" href="#q_4_wa_go_sa">魚介類</a></li>
-<li class="agemono"><a class="btn" href="#q_4_wa_go_age">揚げ物</a></li>
+<li class="agemono"><a class="btn" href="#answerpage" id="wagoage">揚げ物</a></li>
 </ul>
     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
     <span><a class="btn" href="#q_2_wa">ひとつ前に戻る</a></span>
@@ -93,8 +98,8 @@
 <p>質問3</p>
 <h1>肉、魚介類どっちが食べたい？</h1>
 <ul class="flexbox fw">
-<li class="niku"><a class="btn" href="#q_4_wa_ko_ni">肉</a></li>
-<li class="sakana"><a class="btn" href="#q_4_wa_ko_sa">魚介類</a></li>
+<li class="niku"><a class="btn" href="#answerpage" id="wakoni">肉</a></li>
+<li class="sakana"><a class="btn" href="#answerpage" id="wakosa">魚介類</a></li>
 </ul>
     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
     <span><a class="btn" href="#q_2_wa">ひとつ前に戻る</a></span>
@@ -104,9 +109,9 @@
 <p>質問3</p>
 <h1>肉、揚げ物のどちらが食べたい？</h1>
 <ul class="flexbox fw">
-<li class="niku"><a class="btn" href="#q_4_yo_go_ni">肉</a></li>
-<li class="sakana"><a class="btn" href="#q_4_yo_go_sa">魚介類</a></li>
-<li class="agemono"><a class="btn" href="#q_4_yo_go_age">揚げ物</a></li>
+<li class="niku"><a class="btn" href="#answerpage" id="yogoni">肉</a></li>
+<li class="sakana"><a class="btn" href="#answerpage" id="yogosa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#answerpage" id="yogoage">揚げ物</a></li>
 </ul>
     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
     <span><a class="btn" href="#q_2_yo">ひとつ前に戻る</a></span>
@@ -117,8 +122,8 @@
 <p>質問3</p>
 <h1>肉、魚介類のどちらが食べたい？</h1>
 <ul class="flexbox fw">
-<li class="niku"><a class="btn" href="#q_4_yo_men_ni">肉</a></li>
-    <li class="sakana"><a class="btn" href="#q_4_yo_go_sa">魚介類</a></li>
+<li class="niku"><a class="btn" href="#answerpage" id="yomeni">肉</a></li>
+    <li class="sakana"><a class="btn" href="#answerpage" id="yomesa">魚介類</a></li>
 </ul>
     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
     <span><a class="btn" href="#q_2_yo">ひとつ前に戻る</a></span>
@@ -128,8 +133,9 @@
 <p>質問3</p>
 <h1>肉、揚げ物のどちらが食べたい？</h1>
 <ul class="flexbox fw">
-<li class="niku"><a class="btn" href="#q_4_yo_pan_ni">肉</a></li>
-<li class="agemono"><a class="btn" href="#q_4_yo_pan_age">揚げ物</a></li>
+<li class="niku"><a class="btn" href="#answerpage" id="yopani">肉</a></li>
+<li class="sakana"><a class="btn" href="#answerpage" id="yopasa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#answerpage" id="yopaage">揚げ物</a></li>
 </ul>
     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
     <span><a class="btn" href="#q_2_yo">ひとつ前に戻る</a></span>
@@ -139,9 +145,9 @@
 <p>質問3</p>
 <h1>肉、魚介類、揚げ物のどれが食べたい？</h1>
 <ul class="flexbox fw">
-<li class="niku"><a class="btn" href="#q_4_chu_go_ni">肉</a></li>
-<li class="sakana"><a class="btn" href="#q_4_chu_go_sa">魚介類</a></li>
-<li class="agemono"><a class="btn" href="#q_4_chu_go_age">揚げ物</a></li>
+<li class="niku"><a class="btn" href="#answerpage" id="chugoni">肉</a></li>
+<li class="sakana"><a class="btn" href="#answerpage" id="chugosa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#answerpage" id="chugoage">揚げ物</a></li>
 </ul>
     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
     <span><a class="btn" href="#q_2_chu">ひとつ前に戻る</a></span>
@@ -152,96 +158,86 @@
 <h1>肉、魚介類、揚げ物のどれが食べたい？</h1>
 <ul class="flexbox fw">
 <li class="niku"><a class="btn" href="#q_4_chu_men_ni">肉</a></li>
-<li class="sakana"><a class="btn" href="#q_4_chu_men_sa">魚介類</a></li>
-<li class="agemono"><a class="btn" href="#a_chu_men_age">揚げ物</a></li>
-</ul>
-    <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
-    <span><a class="btn" href="#q_2_chu">ひとつ前に戻る</a></span>
-</div>
-    <!------------------------------------------------------------------->
-<div id="q_3_chu_pan" style="display: none;">
-<p>質問3</p>
-<h1>肉、魚介類、揚げ物のどれが食べたい？</h1>
-<ul class="flexbox fw">
-<li class="niku"><a class="btn" href="#a_chu_pan_ni">肉</a></li>
-<li class="sakana"><a class="btn" href="#a_chu_pan_sa">魚介類</a></li>
-<li class="agemono"><a class="btn" href="#a_chu_pan_age">揚げ物</a></li>
+<li class="sakana"><a class="btn" href="#answerpage" id="chumesa">魚介類</a></li>
+<li class="agemono"><a class="btn" href="#answerpage" id="chumeage">揚げ物</a></li>
 </ul>
     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
     <span><a class="btn" href="#q_2_chu">ひとつ前に戻る</a></span>
 </div>
     
-
+    
 
 <!-- 4問目の質問 -->
 <!--　和食　-->
-
-    
 <div id="q_4_wa_go_sa" style="display: none;">
 <p>質問4</p>
 <h1>温かいものと冷たいものならどっち？</h1>
 <ul class="flexbox fw">
-<li class="hot"><a class="btn" href="#a_wa_go_sa_hot">温かいもの</a></li>
-<li class="cold"><a class="btn" href="#a_wa_go_sa_co">冷たいもの</a></li>
+<li class="hot"><a class="btn" href="#answerpage" id="wagosahot">温かいもの</a></li>
+<li class="cold"><a class="btn" href="#answerpage" id="wagosacold">冷たいもの</a></li>
 </ul>
      <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
      <span><a class="btn" href="#q_3_wa_go">ひとつ前に戻る</a></span>
 </div>
-    
 
 <div id="q_4_wa_men_ni" style="display: none;">
 <p>質問4</p>
 <h1>温かいものと冷たいものならどっち？</h1>
 <ul class="flexbox fw">
-<li class="hot"><a class="btn" href="#a_wa_men_ni_hot">温かいもの</a></li>
-<li class="cold"><a class="btn" href="#a_wa_men_ni_co">冷たいもの</a></li>
+<li class="hot"><a class="btn" href="#answerpage" id="wamenihot">温かいもの</a></li>
+<li class="cold"><a class="btn" href="#answerpage" id="wamenicold">冷たいもの</a></li>
 </ul>
      <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+    <span><a class="btn" href="#q_4_wa_men">ひとつ前に戻る</a></span>
 </div>
     
-<div id="q_4_wa_men_gyo" style="display: none;">
+<div id="q_4_wa_men_sa" style="display: none;">
 <p>質問4</p>
 <h1>温かいものと冷たいものならどっち？</h1>
 <ul class="flexbox fw">
-<li class="hot"><a class="btn" href="#a_wa_men_gyo_hot">温かいもの</a></li>
-<li class="cold"><a class="btn" href="#a_wa_men_gyo_co">冷たいもの</a></li>
+<li class="hot"><a class="btn" href="#answerpage" id="wamesahot">温かいもの</a></li>
+<li class="cold"><a class="btn" href="#answerpage" id="wamesacold">冷たいもの</a></li>
 </ul>
      <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
      <span><a class="btn" href="#q_3_wa_men">ひとつ前に戻る</a></span>
 </div>
     
-
+<div id="q_4_wa_men_age" style="display: none;">
+<p>質問4</p>
+<h1>温かいものと冷たいものならどっち？</h1>
+<ul class="flexbox fw">
+<li class="hot"><a class="btn" href="#answerpage" id="wameagehot">温かいもの</a></li>
+<li class="cold"><a class="btn" href="#answerpage" id="wameagecold">冷たいもの</a></li>
+</ul>
+     <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
+     <span><a class="btn" href="#q_3_wa_men">ひとつ前に戻る</a></span>
+</div>
+    
     
 <!--　中華　-->
 <div id="q_4_chu_men_ni" style="display: none;">
 <p>質問4</p>
 <h1>温かいものと冷たいものならどっち？</h1>
 <ul class="flexbox fw">
-<li class="hot"><a class="btn" href="#a_chu_men_ni_hot">温かいもの</a></li>
-<li class="cold"><a class="btn" href="#a_chu_men_ni_co">冷たいもの</a></li>
+<li class="hot"><a class="btn" href="#answerpage" id="chumenihot">温かいもの</a></li>
+<li class="cold"><a class="btn" href="#answerpage" id="chumenicold">冷たいもの</a></li>
 </ul>
      <span><a class="btn" href="#q_1">最初からやりなおす</a></span>
      <span><a class="btn" href="#q_3_chu_men">ひとつ前に戻る</a></span>
 </div>
 
-<!-- 質問の答え -->
-   
- <div id="a_wa_go_ni_hot" style="display: none;">
+    
+<!-- 質問の答え -->   
+<div id="answerpage" style="display: none;" >
         <p>あなたにおすすめなのは…</p>
-        <h4>『ハンバーグ』です！！</h4>
+        <h4 id="answer">           
+    </h4>
    <span><a class="btn" href="#q_1">やりなおす</a></span>
 </div>
   
 
-   
-  <div id="answer2" style="display: none;">
-        <p>あなたにおすすめなのは…</p>
-        <h4>『ラーメン』です！！</h4>
-     <span><a class="btn" href="#q_1">もどる</a></span>
-</div>
-  
-
 </div>
 
+<script src="app2.js"></script>
 </body>
 </html>

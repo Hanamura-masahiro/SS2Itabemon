@@ -208,5 +208,9 @@ h4 {
   text-align: center;
 }
 
-        
+div,span{
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+}
 
